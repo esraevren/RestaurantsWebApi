@@ -1,0 +1,12 @@
+@Restaurants.API_HostAddress = https://localhost:7012
+
+GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
+Accept: application/json
+User-Agent: {{Restaurants.API_HostAddress}}
+Accept-Language: {{$randomInt}}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
+
+ 
