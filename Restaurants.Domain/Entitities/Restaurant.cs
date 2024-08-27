@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurants.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -20,9 +21,5 @@ namespace Restaurants.Domain.Entitities
 
         public Address? Address { get; set; }
         public List<Dish> Dishes { get; set; } = new();
-
-        public User Owner { get; set; } = default!;
-        public string OwnerId { get; set; } = default!;
-        public string? LogoUrl { get; set; }
     }
 }
