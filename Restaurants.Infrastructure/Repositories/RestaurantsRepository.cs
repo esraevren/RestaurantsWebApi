@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
 using Restaurants.Domain.Entitities;
 using Restaurants.Domain.Repositories;
 using Restaurants.Infrastructure.Persistence;
@@ -31,6 +32,17 @@ namespace Restaurants.Infrastructure.Repositories
             dbContext.Add(restaurantEntity);
             await dbContext.SaveChangesAsync();
             return restaurantEntity.Id;
+
+        }
+        public async Task DeleteRestaurant(Restaurant restaurantEntity)
+        {
+            dbContext.Remove(restaurantEntity);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task SaveChanges()
+        {
+            await dbContext.SaveChangesAsync();
         }
     }
 }
